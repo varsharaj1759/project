@@ -1,0 +1,153 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Booking</title>
+<link rel="stylesheet" type="text/css" href="book.css"/>
+<link rel="stylesheet" type="text/css" href="dhtmlxcalendar.css"/>
+<form class="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfLgt7VUL_zCrFYgc_1CHNXSqpMKQqrlNfbTmakX5shIQ5x7Q/formResponse"
+ action="index.html" method="post">
+
+</form>
+
+<script src="dhtmlxcalendar.js"></script>
+
+<style>
+		#calendar,
+		#calendar2,
+		#calendar3,
+		#calendar4,
+		 	{
+			border: 1px solid #909090;
+			font-family: Tahoma;
+			font-size: 12px;
+			}
+</style>
+	<script>
+		var myCalendar;
+		function doOnLoad()
+			{
+			myCalendar = new dhtmlXCalendarObject(["calendar","calendar2","calendar3","calendar4",]);
+			}
+	</script>
+</head>
+<body onload="doOnLoad();">
+<header>
+      <a href="#" class="logo">ROYAL PALACE</a>
+      <div class="menu">
+      </div>
+      <nav>
+        <ul>
+             <li><a href="main.html" class="active">home</a></li>
+              <li><a href="rest.html">resturant</a></li>
+              <li><a href="book.html">book</a></li>
+              <li><a href="team.html">team</a></li>
+              <li><a href="ree.html">services</a></li>
+            <li>  <a href="login.html">login</a></li>
+            <li>  <a href="room.html">rooms</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+	<div id="ab">
+    <div id="check">
+    	<br>
+	<form >
+		<div style="position:relative;height:80px;">
+		<label for="in">Check in:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            		<input id="calendar" name="in" placeholder="2015-06-02" required="" type="text"> <br><br>
+
+		<label for="in">Check out:</label> &nbsp;&nbsp;
+            		<input id="calendar2" name="out" placeholder="2015-06-05" required="" type="text"> <br><br>
+
+		</div>
+			Room Type:
+                <select name="room">
+                    <option value="A/C">A/C</option>
+        			<option value="Non-A/C">Non-A/C</option>
+                </select>
+                <select name="type">
+                    <option value="single">Single</option>
+					<option value="double">Double</option>
+                    <option value="three">Three</option>
+                </select>
+		<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="submit" name="submit" value="submit" />
+		<input type="reset" name="reset" value="Reset" />
+	</form>
+</div><!--chack -->
+   &nbsp;
+   <div id="chat">
+    	<form action="" method="post">
+				<label for="in">Chat</label>
+					<input id="chat" name="chat" placeholder="message" required="">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="submit" value="submit" />
+				</form>
+    </div><!--chat-->
+	<br>
+	<br>
+    <div id="fd">
+				<form action="feedback.php" method="post">
+				<label for="in">Feedback</label>
+					<input id="fd" name="feed" placeholder="Type message" required="">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="submit" value="submit" />
+				</form>
+		</div><!--fd-->
+	</div><!--ab-->
+<div id="book">
+<h1>Booking</h1>
+	<div id="a1">
+    <p>&nbsp;</p>
+
+    <form action="main.html" method="post">
+		 <label for="name">Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    			<input id="name" name="entry.62823905" placeholder="Full Name" required="" tabindex="1" type="text"><br><br>
+
+		<label for="email">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    			<input id="email" name="entry.782559595" placeholder="Email" required="" type="email"><br><br>
+
+		<label for="mobile">Mobile No:</label> &nbsp;
+            		<input id="phone" name="entry.1202856138" placeholder="Number" required="" type="text"> <br><br>
+
+		<div style="position:relative;height:80px;">
+
+		<label for="in">Check in:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            		<input id="calendar3" name="entry.1927360198" placeholder="2015-06-02" required="" type="text"> <br><br>
+
+		<label for="out">Check out:</label> &nbsp;&nbsp;
+            		<input id="calendar4" name="entry.1501709678" placeholder="2015-06-05" required="" type="text"> <br><br>
+
+		</div>
+		Room Type:
+			<select name="room">
+				<option value="A/C">A/C</option>
+				<option value="Non-A/C">Non-A/C</option>
+			</select>
+			<select  name="type">
+				<option value="single">Single</option>
+				<option value="double">Double</option>
+				<option value="three">Three</option>
+			</select>
+		<br/><br/><br/>
+<a href="payment.html"><input type="submit" name="submit" value="Book" action="overview.html"/></a>
+<input type="reset" name="reset" value="Reset" />
+</form>
+    </div><!--a1-->
+</div><!--book-->
+<div id="rest">
+    	<h1>Special Dishes</h1>
+        	<div id="a3">
+            </div>
+            <div id="b3">
+            </div>
+            <div id="c3">
+            </div>
+	</div><!--rest-->
+</div><!--holder-->
+</body>
+</html>

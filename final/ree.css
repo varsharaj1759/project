@@ -1,0 +1,177 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(images/nature.jpg)
+  ;
+}
+.container
+{
+  position: relative;
+  width: 1200px;
+  height: 600px;
+  margin: 80px auto 0;
+
+}
+.container .box
+{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+.container .box::before
+{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transform: scaleX(0);
+  z-index: 1;
+}
+.container .box:hover:before
+{
+transform: scaleX(1);
+opacity: 1;
+}
+.container .box::after
+{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-left:  1px solid #fff;
+  border-right:  1px solid #fff;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transform: scaleY(0);
+  z-index: 1;
+}
+.container .box:hover:after
+{
+transform: scaleY(1);
+opacity: 1;
+}
+.container .box .imgBox
+{
+  position: relative;
+}
+.container .box .imgBox img
+{
+  width: 100%;
+  transition: 0.5s;
+}
+.container .box:hover .imgBox img
+{
+  opacity: .2;
+  transform: scale(1.2);
+}
+.container .box .content
+{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container .box .content h2
+{
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  transition: .5s;
+  transform: translateY(-50px);
+  opacity: 0;
+  visibility: hidden;
+}
+.container .box .content p
+{
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  transition: .5s;
+  transform: translateY(50px);
+  opacity: 0;
+  visibility: hidden;
+}
+.container .box:hover .content h2,
+.container .box:hover .content p
+{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: .2s;
+}
+header
+{
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+.logo
+{
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  color: #069370;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 700;
+  text-decoration: none;
+}
+nav
+{
+  float: right;
+}
+.clearfix
+{
+  clear: both;
+}
+nav ul{
+  margin: 0;
+  padding:0;
+  display: flex;
+}
+nav ul li
+{
+  list-style: none;
+}
+nav ul li a
+{
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  text-transform: uppercase;
+}
+nav ul li a.active,
+nav ul li a:hover{
+background: #069370;
+color: #fff;
+transition: 0.5s;
+}
